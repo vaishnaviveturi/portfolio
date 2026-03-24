@@ -1,146 +1,222 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Mail,
-  Phone,
-  Linkedin,
-  Github,
-  GraduationCap,
-  Cpu,
-  Award,
-  Code,
-  BookOpen,
-  Briefcase,
-  FileText,
-} from "lucide-react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Veturi | Portfolio</title>
 
-export default function Portfolio() {
-  return (
-    <div className="bg-white text-slate-900 min-h-screen font-sans">
-      {/* NAVBAR */}
-      <nav className="border-b bg-white sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold tracking-wide">Vaishnavi Veturi</h1>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-          <div className="hidden md:flex gap-10 text-sm font-medium text-slate-600">
-            <a href="#about" className="hover:text-black">About</a>
-            <a href="#projects" className="hover:text-black">Projects</a>
-            <a href="#skills" className="hover:text-black">Skills</a>
-            <a href="#experience" className="hover:text-black">Experience</a>
-            <a href="#education" className="hover:text-black">Education</a>
-            <a href="#contact" className="hover:text-black">Contact</a>
-          </div>
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Vaishnavi Veturi</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Vaishnavi Veturi</h1>
+        <h2>ECE Student | VLSI Enthusiast | Embedded Systems</h2>
+        <p>I am an Electronics and Communication Engineering student passionate about VLSI Design, Embedded Systems, and modern technology development. I love building real-world engineering projects and learning advanced digital design concepts.</p>
+
+        <button class="btn" onclick="scrollToProjects()">View Projects</button>
+        <button class="btn" onclick="scrollToContact()">Contact Me</button>
+    </div>
+
+    <div class="hero-img">
+        <img src="profile.jpg" alt="profile">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+    <h2 class="section-title">About Me</h2>
+    <p class="about">I am currently pursuing B.Tech in Electronics and Communication Engineering with a strong interest in VLSI Design and Embedded Systems. I enjoy working on real-time projects like Air Quality Monitoring systems and digital design using Verilog HDL.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">Digital Electronics</div>
+        <div class="skill-card">Verilog HDL</div>
+        <div class="skill-card">Arduino & Embedded Systems</div>
+        <div class="skill-card">HTML & CSS</div>
+        <div class="skill-card">VLSI Basics</div>
+        <div class="skill-card">C Programming</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Smart Air Quality Monitoring System</h3>
+            <p>This project detects harmful gases like Methane, Carbon Monoxide, and Smoke using MQ sensors. The system helps protect sanitation workers by giving real-time monitoring using ESP32.</p>
+            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
         </div>
-      </nav>
-
-      {/* HERO SECTION */}
-      <section className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-slate-500 font-medium mb-3 tracking-wide">
-            PORTFOLIO
-          </p>
-
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-            VLSI Design Enthusiast
-            <span className="block text-slate-400 mt-2">Electronics Engineer</span>
-          </h1>
-
-          <p className="text-slate-600 leading-relaxed mb-8 max-w-lg">
-            Passionate Electronics and Communication Engineering student with
-            strong fundamentals in VLSI Design, RTL Design, and Digital
-            Electronics. Experienced in Verilog HDL, Python, and semiconductor
-            workflows with hands-on project experience in embedded and VLSI
-            systems.
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            <Button className="rounded-2xl px-7 py-5 text-base">
-              <Github className="mr-2 h-4 w-4" /> GitHub Profile
-            </Button>
-
-            <Button variant="outline" className="rounded-2xl px-7 py-5 text-base">
-              <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-            </Button>
-
-            <Button variant="outline" className="rounded-2xl px-7 py-5 text-base">
-              <FileText className="mr-2 h-4 w-4" /> Download Resume
-            </Button>
-          </div>
-        </motion.div>
-
-        {/* PROFILE IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center"
-        >
-          <img
-            src="/profile.jpg"
-            alt="Vaishnavi Veturi"
-            className="w-80 h-[430px] object-cover rounded-3xl shadow-xl"
-          />
-        </motion.div>
-      </section>
-
-      {/* ABOUT SECTION */}
-      <section id="about" className="max-w-7xl mx-auto px-8 py-20">
-        <h2 className="text-3xl font-semibold mb-12">About Me</h2>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          <Card className="rounded-3xl shadow-sm">
-            <CardContent className="p-8 text-slate-600 leading-relaxed">
-              I am currently pursuing B.Tech in Electronics & Communication
-              Engineering at GMRIT with a CGPA of 9.2. My primary interest lies
-              in VLSI design, RTL design, and digital circuit implementation
-              using Verilog HDL. I aim to build a strong career in semiconductor
-              design and chip development.
-            </CardContent>
-          </Card>
-
-          <div className="grid grid-cols-2 gap-6">
-            <Card className="rounded-3xl shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Award className="mx-auto mb-3" />
-                <p className="font-semibold">CGPA</p>
-                <p className="text-slate-500">9.2</p>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-3xl shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Code className="mx-auto mb-3" />
-                <p className="font-semibold">Core Skill</p>
-                <p className="text-slate-500">Verilog HDL</p>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-3xl shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Cpu className="mx-auto mb-3" />
-                <p className="font-semibold">Domain</p>
-                <p className="text-slate-500">VLSI Design</p>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-3xl shadow-sm">
-              <CardContent className="p-6 text-center">
-                <BookOpen className="mx-auto mb-3" />
-                <p className="font-semibold">Branch</p>
-                <p className="text-slate-500">ECE</p>
-              </CardContent>
-            </Card>
-          </div>
+        <div class="project-card">
+            <h3>UART Protocol Design using Verilog</h3>
+            <p>Designed and implemented UART transmitter and receiver modules using Verilog HDL. The design focuses on digital communication and VLSI implementation concepts.</p>
+            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
         </div>
-      </section>
+    </div>
+</section>
 
-      {/* PROJECTS */}
+<!-- CONTACT -->
+<section id="contact" class="contact hidden">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: vaishnaviveturi@example.com</p>
+    <p><a href="https://github.com/vaishnaviveturi" target="_blank">GitHub Profile</a></p>
+</section>
+
+<!-- Scripts -->
+<script>
+function scrollToProjects() {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+}
+
+function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+
+// Scroll Animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Veturi | Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Vaishnavi Veturi</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Vaishnavi Veturi</h1>
+        <h2>ECE Student | VLSI Enthusiast | Embedded Systems</h2>
+        <p>I am an Electronics and Communication Engineering student passionate about VLSI Design, Embedded Systems, and modern technology development. I love building real-world engineering projects and learning advanced digital design concepts.</p>
+
+        <button class="btn" onclick="scrollToProjects()">View Projects</button>
+        <button class="btn" onclick="scrollToContact()">Contact Me</button>
+    </div>
+
+    <div class="hero-img">
+        <img src="profile.jpg" alt="profile">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+    <h2 class="section-title">About Me</h2>
+    <p class="about">I am currently pursuing B.Tech in Electronics and Communication Engineering with a strong interest in VLSI Design and Embedded Systems. I enjoy working on real-time projects like Air Quality Monitoring systems and digital design using Verilog HDL.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">Digital Electronics</div>
+        <div class="skill-card">Verilog HDL</div>
+        <div class="skill-card">Arduino & Embedded Systems</div>
+        <div class="skill-card">HTML & CSS</div>
+        <div class="skill-card">VLSI Basics</div>
+        <div class="skill-card">C Programming</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Smart Air Quality Monitoring System</h3>
+            <p>This project detects harmful gases like Methane, Carbon Monoxide, and Smoke using MQ sensors. The system helps protect sanitation workers by giving real-time monitoring using ESP32.</p>
+            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>UART Protocol Design using Verilog</h3>
+            <p>Designed and implemented UART transmitter and receiver modules using Verilog HDL. The design focuses on digital communication and VLSI implementation concepts.</p>
+            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact hidden">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: vaishnaviveturi@example.com</p>
+    <p><a href="https://github.com/vaishnaviveturi" target="_blank">GitHub Profile</a></p>
+</section>
+
+<!-- Scripts -->
+<script>
+function scrollToProjects() {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+}
+
+function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+
+// Scroll Animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>      {/* PROJECTS */}
       <section id="projects" className="max-w-7xl mx-auto px-8 py-20 bg-slate-50">
         <h2 className="text-3xl font-semibold mb-12">Projects</h2>
 
