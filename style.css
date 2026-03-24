@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Veturi | Portfolio</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GENERAL */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg, #020617, #000000, #1e3a8a);
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+position:fixed;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:20px;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#60a5fa;
+}
+
+/* HERO SECTION */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+margin-top:70px;
+}
+
+.hero-text{
+max-width:550px;
+}
+
+.hero-text h1{
+font-size:50px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero-text h2{
+font-size:22px;
+color:#60a5fa;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:16px;
+line-height:1.7;
+margin-bottom:30px;
+color:#cbd5f5;
+}
+
+/* BUTTONS */
+.btn{
+padding:12px 28px;
+border:none;
+border-radius:8px;
+background:linear-gradient(45deg,#2563eb,#1e40af);
+color:white;
+font-size:15px;
+font-weight:500;
+cursor:pointer;
+margin-right:15px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,0.5);
+}
+
+/* PROFILE IMAGE */
+.hero-img img{
+width:280px;
+border-radius:50%;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* SECTIONS */
+section{
+padding:90px 8%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+text-align:center;
+}
+
+/* ABOUT */
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+line-height:1.8;
+color:#cbd5f5;
+}
+
+/* SKILLS */
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:12px;
+text-align:center;
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.08);
+}
+
+/* PROJECTS */
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.08);
+}
+
+.project-card h3{
+margin-bottom:10px;
+}
+
+.project-card p{
+font-size:14px;
+line-height:1.6;
+color:#cbd5f5;
+margin-bottom:15px;
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+}
+
+.contact a{
+text-decoration:none;
+color:#60a5fa;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo">Vaishnavi Veturi</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>Vaishnavi Veturi</h1>
+<h2>ECE Student | VLSI Enthusiast</h2>
+
+<p>
+I am an Electronics and Communication Engineering student interested in VLSI Design,
+Embedded Systems and modern digital electronics. I enjoy building real-world engineering
+projects and learning advanced technologies.
+</p>
+
+<button class="btn" onclick="scrollProjects()">View Projects</button>
+
+<a href="resume.pdf" download>
+<button class="btn">Download Resume</button>
+</a>
+
+</div>
+
+<div class="hero-img">
+<img src="profile.jpg" alt="profile">
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+
+<p class="about">
+I am currently pursuing B.Tech in Electronics and Communication Engineering.
+I am passionate about VLSI design, digital electronics, and embedded systems.
+I enjoy working on real-time projects such as Air Quality Monitoring Systems and
+Verilog HDL based designs.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-container">
+
+<div class="skill-card">Digital Electronics</div>
+<div class="skill-card">Verilog HDL</div>
+<div class="skill-card">Arduino & Embedded Systems</div>
+<div class="skill-card">HTML & CSS</div>
+<div class="skill-card">VLSI Basics</div>
+<div class="skill-card">C Programming</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="project-container">
+
+<div class="project-card">
+<h3>Smart Air Quality Monitoring System</h3>
+<p>
+This project detects harmful gases such as methane, carbon monoxide and smoke using MQ sensors.
+The system provides real-time monitoring using ESP32.
+</p>
+</div>
+
+<div class="project-card">
+<h3>UART Protocol Design using Verilog</h3>
+<p>
+Designed and implemented UART transmitter and receiver using Verilog HDL
+for digital communication applications.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2 class="section-title">Contact</h2>
+
+<p>Email: vaishnaviveturi@gmail.com</p>
+<p>GitHub: https://github.com/vaishnaviveturi</p>
+
+</section>
+
+<script>
+function scrollProjects(){
+document.getElementById("projects").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
