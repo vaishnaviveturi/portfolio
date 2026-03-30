@@ -1,370 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaishnavi Veturi | Portfolio</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- External CSS -->
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Vaishnavi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-    <div class="logo">Vaishnavi Veturi</div>
+    <h2 class="logo">Vaishnavi</h2>
     <ul>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Vaishnavi Veturi</h1>
-        <h2>ECE Student | VLSI Enthusiast | Embedded Systems</h2>
-        <p>I am an Electronics and Communication Engineering student passionate about VLSI Design, Embedded Systems, and modern technology development. I love building real-world engineering projects and learning advanced digital design concepts.</p>
+<!-- HOME SECTION -->
+<section id="home" class="home">
+    <div class="home-text">
+        <h1>Hello, I'm <span>Vaishnavi</span></h1>
+        <h3>Electronics & Communication Engineer</h3>
+        <p>Interested in VLSI Design and Digital Electronics</p>
 
-        <button class="btn" onclick="scrollToProjects()">View Projects</button>
-        <button class="btn" onclick="scrollToContact()">Contact Me</button>
+        <a href="resume.pdf" download class="btn">Download Resume</a>
     </div>
 
-    <div class="hero-img">
-        <img src="profile.jpg" alt="profile">
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="hidden">
-    <h2 class="section-title">About Me</h2>
-    <p class="about">I am currently pursuing B.Tech in Electronics and Communication Engineering with a strong interest in VLSI Design and Embedded Systems. I enjoy working on real-time projects like Air Quality Monitoring systems and digital design using Verilog HDL.</p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="hidden">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-container">
-        <div class="skill-card">Digital Electronics</div>
-        <div class="skill-card">Verilog HDL</div>
-        <div class="skill-card">Arduino & Embedded Systems</div>
-        <div class="skill-card">HTML & CSS</div>
-        <div class="skill-card">VLSI Basics</div>
-        <div class="skill-card">C Programming</div>
+    <div class="home-img">
+        <img src="profile.jpg" alt="Profile Picture">
     </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="hidden">
-    <h2 class="section-title">Projects</h2>
-    <div class="project-container">
-        <div class="project-card">
-            <h3>Smart Air Quality Monitoring System</h3>
-            <p>This project detects harmful gases like Methane, Carbon Monoxide, and Smoke using MQ sensors. The system helps protect sanitation workers by giving real-time monitoring using ESP32.</p>
-            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project-card">
-            <h3>UART Protocol Design using Verilog</h3>
-            <p>Designed and implemented UART transmitter and receiver modules using Verilog HDL. The design focuses on digital communication and VLSI implementation concepts.</p>
-            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
-        </div>
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a motivated Electronics and Communication Engineering student with strong
+        fundamentals in digital electronics and VLSI design. I have experience working
+        with Verilog HDL, Python and EDA tools like Cadence and Vivado.
+        My goal is to build a career in VLSI design and semiconductor technology.
+    </p>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+
+    <div class="skill-box">
+        <h3>Programming</h3>
+        <p>Python, C</p>
     </div>
+
+    <div class="skill-box">
+        <h3>HDL</h3>
+        <p>Verilog HDL, RTL Design</p>
+    </div>
+
+    <div class="skill-box">
+        <h3>Tools</h3>
+        <p>Cadence, Xilinx, Multisim</p>
+    </div>
+
+    <div class="skill-box">
+        <h3>Core Subjects</h3>
+        <p>Digital Electronics, Analog Electronics, VLSI Fundamentals</p>
+    </div>
+
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact hidden">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: vaishnaviveturi@example.com</p>
-    <p><a href="https://github.com/vaishnaviveturi" target="_blank">GitHub Profile</a></p>
-</section>
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="certifications">
+    <h2>Certifications</h2>
 
-<!-- Scripts -->
-<script>
-function scrollToProjects() {
-    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-}
-
-function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-}
-
-// Scroll Animation
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaishnavi Veturi | Portfolio</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- External CSS -->
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<nav>
-    <div class="logo">Vaishnavi Veturi</div>
     <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>Design for Testability (DFT) – Maven Silicon</li>
+        <li>Python Programming – edX</li>
+        <li>Chip Engineering Program – L&T EduTech</li>
+        <li>Sensors, Actuators & IoT Unleashed – GMRIT</li>
     </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Vaishnavi Veturi</h1>
-        <h2>ECE Student | VLSI Enthusiast | Embedded Systems</h2>
-        <p>I am an Electronics and Communication Engineering student passionate about VLSI Design, Embedded Systems, and modern technology development. I love building real-world engineering projects and learning advanced digital design concepts.</p>
-
-        <button class="btn" onclick="scrollToProjects()">View Projects</button>
-        <button class="btn" onclick="scrollToContact()">Contact Me</button>
-    </div>
-
-    <div class="hero-img">
-        <img src="profile.jpg" alt="profile">
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="hidden">
-    <h2 class="section-title">About Me</h2>
-    <p class="about">I am currently pursuing B.Tech in Electronics and Communication Engineering with a strong interest in VLSI Design and Embedded Systems. I enjoy working on real-time projects like Air Quality Monitoring systems and digital design using Verilog HDL.</p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="hidden">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-container">
-        <div class="skill-card">Digital Electronics</div>
-        <div class="skill-card">Verilog HDL</div>
-        <div class="skill-card">Arduino & Embedded Systems</div>
-        <div class="skill-card">HTML & CSS</div>
-        <div class="skill-card">VLSI Basics</div>
-        <div class="skill-card">C Programming</div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="hidden">
-    <h2 class="section-title">Projects</h2>
-    <div class="project-container">
-        <div class="project-card">
-            <h3>Smart Air Quality Monitoring System</h3>
-            <p>This project detects harmful gases like Methane, Carbon Monoxide, and Smoke using MQ sensors. The system helps protect sanitation workers by giving real-time monitoring using ESP32.</p>
-            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project-card">
-            <h3>UART Protocol Design using Verilog</h3>
-            <p>Designed and implemented UART transmitter and receiver modules using Verilog HDL. The design focuses on digital communication and VLSI implementation concepts.</p>
-            <a href="https://github.com/vaishnaviveturi" target="_blank">View on GitHub</a>
-        </div>
-    </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact hidden">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: vaishnaviveturi@example.com</p>
-    <p><a href="https://github.com/vaishnaviveturi" target="_blank">GitHub Profile</a></p>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <p>Email: vaishnaviveturi82@gmail.com</p>
+    <p>Phone: +91 8019267140</p>
+
+    <div class="social">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+    </div>
 </section>
 
-<!-- Scripts -->
-<script>
-function scrollToProjects() {
-    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-}
-
-function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-}
-
-// Scroll Animation
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
-</script>
+<footer>
+    <p>© 2026 Vaishnavi | Portfolio</p>
+</footer>
 
 </body>
-</html>      {/* PROJECTS */}
-      <section id="projects" className="max-w-7xl mx-auto px-8 py-20 bg-slate-50">
-        <h2 className="text-3xl font-semibold mb-12">Projects</h2>
-
-        <div className="grid md:grid-cols-2 gap-10">
-          <Card className="rounded-3xl shadow-sm hover:shadow-md transition">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-semibold mb-3">
-                Smart Air Quality Monitoring System
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Developed an IoT-based air quality monitoring system using ESP32
-                and gas sensors (MQ-2, MQ-4, MQ-7). The system detects harmful
-                gases and provides real-time monitoring using Blynk and LCD
-                display.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-3xl shadow-sm hover:shadow-md transition">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-semibold mb-3">
-                UART Protocol Implementation (Verilog HDL)
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Designed and simulated UART transmitter and receiver modules
-                using Verilog HDL with baud rate control and waveform
-                verification using Quartus Prime.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* EXPERIENCE */}
-      <section id="experience" className="max-w-7xl mx-auto px-8 py-20">
-        <h2 className="text-3xl font-semibold mb-10">Experience</h2>
-
-        <Card className="rounded-3xl shadow-sm">
-          <CardContent className="p-8">
-            <div className="flex items-start gap-5">
-              <Briefcase />
-              <div>
-                <h3 className="text-lg font-semibold">
-                  VLSI Physical Design Intern
-                </h3>
-                <p className="text-slate-600 mb-3">
-                  Abhyasa Semicon Technologies – July 2025
-                </p>
-                <ul className="text-slate-600 space-y-2">
-                  <li>Worked on digital logic implementation using Verilog.</li>
-                  <li>Learned the RTL to GDSII design flow.</li>
-                  <li>Gained hands-on exposure to semiconductor workflows.</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* SKILLS */}
-      <section id="skills" className="max-w-7xl mx-auto px-8 py-20 bg-slate-50">
-        <h2 className="text-3xl font-semibold mb-12">Technical Skills</h2>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            "Verilog HDL",
-            "RTL Design",
-            "Digital Electronics",
-            "Python Programming",
-            "VLSI Fundamentals",
-            "Cadence Tools",
-            "Xilinx Vivado",
-            "C Programming",
-            "Problem Solving",
-          ].map((skill, index) => (
-            <Card key={index} className="rounded-3xl shadow-sm">
-              <CardContent className="p-6 text-center font-medium text-slate-700">
-                {skill}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* EDUCATION */}
-      <section id="education" className="max-w-7xl mx-auto px-8 py-20">
-        <h2 className="text-3xl font-semibold mb-10">Education</h2>
-
-        <Card className="rounded-3xl shadow-sm">
-          <CardContent className="p-8 space-y-8">
-            <div className="flex items-start gap-5">
-              <GraduationCap />
-              <div>
-                <h3 className="font-semibold text-lg">
-                  B.Tech – Electronics & Communication Engineering
-                </h3>
-                <p className="text-slate-600">GMRIT, Rajam (2023 – 2027)</p>
-                <p className="text-slate-600">CGPA: 9.2</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-5">
-              <GraduationCap />
-              <div>
-                <h3 className="font-semibold text-lg">Intermediate – Science</h3>
-                <p className="text-slate-600">Narayana Junior College</p>
-                <p className="text-slate-600">CGPA: 9.67</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="max-w-7xl mx-auto px-8 py-20">
-        <h2 className="text-3xl font-semibold mb-12">Contact</h2>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="rounded-3xl shadow-sm">
-            <CardContent className="p-8 text-center">
-              <Mail className="mx-auto mb-4" />
-              <p className="font-medium">Email</p>
-              <p className="text-slate-600">vaishnaviveturi82@gmail.com</p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-3xl shadow-sm">
-            <CardContent className="p-8 text-center">
-              <Phone className="mx-auto mb-4" />
-              <p className="font-medium">Phone</p>
-              <p className="text-slate-600">+91 8019267140</p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-3xl shadow-sm">
-            <CardContent className="p-8 text-center">
-              <Github className="mx-auto mb-4" />
-              <p className="font-medium">GitHub</p>
-              <p className="text-slate-600">github.com/vaishnaviveturi</p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t text-center py-8 text-slate-500 text-sm">
-        © 2026 Vaishnavi Veturi | Professional Portfolio Website
-      </footer>
-    </div>
-  );
-}
+</html>
